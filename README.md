@@ -66,59 +66,10 @@ The sanitary pad disposal machine incinerates used napkins by heating a nichrome
 3. Upload the code from the `incinerator.ino` file (provided below).
 
 ## Circuit Diagram
-
-![Circuit Diagram](path_to_circuit_diagram_image)
+Refer to SanitaryPadDisposalMachineReport.Pdf for the circuit and other diagrams
 
 ## Code
-
-```cpp
-#include <DallasTemperature.h>
-#include <OneWire.h>
-
-#define ONE_WIRE_BUS 4                          //D2 pin of NodeMCU
-#define RELAY_PIN 5                             //D1 pin of NodeMCU
-
-OneWire oneWire(ONE_WIRE_BUS);
-DallasTemperature sensors(&oneWire);
-boolean relay = true;
-
-void setup(void) {
-  Serial.begin(9600);
-  sensors.begin();
-  pinMode(RELAY_PIN, OUTPUT);                  
-  digitalWrite(RELAY_PIN, LOW);                 
-}
-
-void loop(void) { 
-  sensors.requestTemperatures();
-  float temperature = sensors.getTempCByIndex(0);
-
-  if (temperature > 28.0 && relay == true) {
-    Serial.println("Temperature is: ");
-    Serial.println(temperature);
-    digitalWrite(RELAY_PIN, HIGH);
-    Serial.println("Turning off relay.");
-    relay = false;
-  } else if (relay == true) {
-    Serial.println("Temperature is: ");
-    Serial.println(temperature);
-    digitalWrite(RELAY_PIN, LOW);
-    Serial.println("Relay is on.");
-  } else {
-    Serial.println("Relay is off");
-    int start = 0;
-    Serial.println("Enter 1 to start the relay");
-    while (Serial.available() == 0) {
-    }
-    start = Serial.parseInt();
-    if (start == 1) {
-      relay = true;
-      Serial.println("Turning on relay.");
-    }
-  }
-  delay(5000);
-}
-```
+refer to the 
 
 ## Usage
 
