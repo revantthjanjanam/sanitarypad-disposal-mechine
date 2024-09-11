@@ -66,10 +66,12 @@ The sanitary pad disposal machine incinerates used napkins by heating a nichrome
 3. Upload the code from the `incinerator.ino` file (provided below).
 
 ## Circuit Diagram
-Refer to SanitaryPadDisposalMachineReport.Pdf for the circuit and other diagrams
+
+Refer to **SanitaryPadDisposalMachineReport.Pdf** for the circuit and other diagrams.
 
 ## Code
-refer to the 
+
+Refer to the `Blink_copy_20230824153845.ino` file for the full code implementation.
 
 ## Usage
 
