@@ -127,12 +127,3 @@ void loop(void) {
 3. If the temperature exceeds the threshold (28°C), the relay will turn off the heating element (nichrome wire). If the temperature is below the threshold, the heating element remains on.
 4. The user can manually restart the incinerator via the **Serial Monitor** by entering `1`.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
-
-### Key Points for Customization
-1. Update the image paths (e.g., circuit diagram) if you have them.
-2. Modify the temperature thresholds or component configurations as per your actual setup.
-3. Add or modify the license information based on your preferences.
